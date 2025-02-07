@@ -4,8 +4,8 @@ use serde::Serialize;
 
 #[derive(Debug, Serialize)]
 pub struct Block {
-    ts: u64,
-    nonce: u64,
+    ts: i64,
+    pub nonce: u64,
     txs: Vec<Transaction>,
     previous_hash: String,
 }
@@ -18,7 +18,7 @@ pub struct Transaction {
 }
 
 impl Block {
-    pub fn new(ts: u64, txs: Vec<Transaction>, previous_block: &Self) -> anyhow::Result<Self> {
+    pub fn new(ts: i64, txs: Vec<Transaction>, previous_block: &Self) -> anyhow::Result<Self> {
         Ok(Self {
             ts,
             nonce: 0,

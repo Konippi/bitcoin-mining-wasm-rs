@@ -1,0 +1,13 @@
+{
+  "name": "bitcoin-mining-wasm-rs",
+  "version": "1.0.0",
+  "repository": "git@github.com:Konippi/bitcoin-mining-wasm-rs.git",
+  "author": "Konippi <konippi-114@outlook.jp>",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
