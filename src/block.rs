@@ -57,8 +57,8 @@ impl Block {
         }
     }
 
-    pub fn mine(&mut self, to_match: &str) -> anyhow::Result<()> {
-        while !self.is_valid(to_match)? {
+    pub fn mine(&mut self, target_hex: &str) -> anyhow::Result<()> {
+        while !self.is_valid(target_hex)? {
             self.nonce += 1;
         }
 
